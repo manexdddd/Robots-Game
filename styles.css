@@ -1,0 +1,665 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+    margin-left: 90px;
+    height: 145vh;
+    font-family: Arial, sans-serif;
+     background-image: url("FondosPixel/edificios.png");
+   background-repeat: no-repeat;
+background-size: cover; /* o 'contain' si quieres ajustar toda la imagen sin que se corte */
+background-color: black;
+}
+
+#game-container {
+    display: flex;
+    width: 100%;
+    height: 110vh;
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Softer border */
+    background: rgba(39, 39, 39, 0.3); /* More transparent background */
+    backdrop-filter: blur(15px); /* Increased blur for a smoother glass effect */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow for depth */
+    border-radius: 15px;
+    margin-top: 10px;
+    padding: 20px;
+    margin-right: 120px;
+}
+
+
+
+  
+.decoraciones {
+    position: relative;
+    height: 100vh; /* Ajustar altura al 100% del viewport */
+}
+
+/* Estilos para cada elemento usando position: absolute */
+.farmacia, .enca, .mascota, .actor, .tinaco {
+    position: absolute;
+}
+
+/* Posiciona cada elemento */
+.farmacia {
+    top: -118px;
+    left: 8px;
+    width: 160px;
+    height: 160px;
+}
+
+.farmacia img {
+    width: 469px;
+    height: 94px;
+}
+
+.enca {
+    top: -300px;
+    left: 390px;
+    width: 160px;
+    height: 160px;
+}
+
+.enca img {
+    width: 341px;
+    height: 59px;
+}
+
+.mascota {
+    top: -85px;
+    left: 870px;
+    width: 160px;
+    height: 160px;
+}
+
+.mascota img {
+    width: 85px;
+    height: 85px;
+}
+
+.actor {
+    top: -160px;
+    left: 680px;
+    width: 160px;
+    height: 160px;
+}
+
+.actor img {
+    width: 133px;
+    height: 139px;
+}
+
+.tinaco {
+    top: -180px;
+    left: 550px;
+}
+
+.tinaco img {
+    width: 109px;
+    height: 160px;
+}
+
+#laboratorios {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    padding: 10px;
+    border-right: 2px solid #333;
+}
+
+.laboratorio { 
+    flex: 1; 
+    margin: 10px 0; 
+    border: 2px solid #333; 
+    position: relative; /* Added this */ 
+}
+.elval { 
+    margin: 10px 0; 
+    border: 2px solid #333; 
+    width: 190px;
+    height: 208px;
+    position: relative;
+    background-image: url("FondosPixel/door3.png"); 
+    background-size: cover;
+    background-position: center;
+}
+
+#elevadorInterior { transition: transform 1s ease-in-out; position: relative; } .elevator-down { transform: translateY(300px); /* Ajusta el valor según sea necesario */ } .elevator-up { transform: translateY(-300px); /* Ajusta el valor según sea necesario */ }
+.laboratorio img.cientifico1,
+.laboratorio img.cientifico2,
+.laboratorio img.cientifico3,
+.laboratorio img.robot1,
+.laboratorio img.robot2,
+.laboratorio img.robot3,.laboratorio img.robot5  {
+    position: absolute;
+    transition: transform 1s ease-in-out; /* Suavizar la animación del movimiento de los personajes */
+   
+}
+
+/*Posicion de los cientificos*/
+.laboratorio img.cientifico1 {
+    top: 50%;
+    left: 10%;
+}
+
+.laboratorio img.cientifico2 {
+    top: 62%;
+    left: 25%;
+}
+
+.laboratorio img.cientifico3 {
+ top: 50%;
+ left: 35%;   
+}
+/*Posicion de los robots*/
+.laboratorio img.robot1 {
+    top: 40%;
+    left: 75%; 
+}
+
+.laboratorio img.robot2 {
+    top: 35%;
+    left: 55%; 
+}
+
+.laboratorio img.robot3 {
+    top: 60%;
+    left: 65%; 
+}
+
+.laboratorio img.robot5 {
+    top: 60%;
+    left: 65%; 
+}
+
+/* Estilos del elevador */
+#elevador {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+   /* width: 38%;*/
+    padding: 10px;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid #333;
+    overflow: hidden;
+    height: 680px;
+}
+
+#button-container {
+    display: flex;
+    flex-direction: column; /* Alineación en columna */
+    gap: 10px;
+    align-items: center;
+    margin-top: 15px;
+   
+}
+
+#button-container button {
+    width: 100px; /* Ancho fijo para que todos los botones tengan la misma medida */
+    background-color: #4CAF50; /* Color de fondo */
+    color: white; /* Color del texto */
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#button-container button:hover {
+    background-color: #45a049; /* Color al pasar el ratón */
+}
+
+#button-container button:active {
+    background-color: #3e8e41; /* Color al hacer clic */
+}
+
+
+#elevadorInterior {
+    position: relative;
+    display: flex; /* Cambiamos a flexbox */
+    justify-content: center; /* Centra horizontalmente los elementos */
+    align-items: flex-end; /* Alinea verticalmente los elementos en la parte inferior */
+
+    top:100px;
+}
+
+#elevatorCar {
+    transition: top 0.5s ease-in-out;
+}
+
+.selected {
+    position: relative;
+    border: 2px solid transparent;
+    animation: sparkle-border 1s infinite;
+}
+
+/* Crear destellos de "estrellitas" */
+.selected::before,
+.selected::after {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: yellow;
+    opacity: 0.8;
+    box-shadow: 0 0 5px rgba(255, 255, 0, 0.7), 0 0 10px rgba(255, 255, 0, 0.5);
+    animation: sparkle 0.8s linear infinite;
+}
+
+/* Colocación de las "estrellitas" en diferentes puntos */
+.selected::before {
+    top: -5px;
+    left: -5px;
+    animation-delay: 0.1s;
+}
+.selected::after {
+    bottom: -5px;
+    right: -5px;
+    animation-delay: 0.3s;
+}
+
+/* Animación de parpadeo */
+@keyframes sparkle {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.5); opacity: 0.6; }
+}
+
+/* Animación del borde de selección */
+@keyframes sparkle-border {
+    0% {
+        border-color: transparent;
+        box-shadow: 0 0 5px rgba(255, 255, 0, 0.3);
+    }
+    50% {
+        border-color: yellow;
+        box-shadow: 0 0 10px rgba(255, 255, 0, 0.5);
+    }
+    100% {
+        border-color: transparent;
+        box-shadow: 0 0 5px rgba(255, 255, 0, 0.3);
+    }
+}
+
+
+/* Estilos de los árboles */
+.tree {
+    width: 180px;
+    height: 180px;
+    position: relative;
+    margin: 10px;
+    top: -85px;
+    left: 20px;
+}
+.tree_size {
+    width: 180px;
+    height: 180px;
+    
+
+}
+/*Tamaño de las imagenes de los laboratorios*/
+.lab1 {
+    width: 695px;
+    height: 310px;
+}
+
+.lab2 {
+    width: 695px;
+    height: 310px;
+}
+/*Tamaño de los cientificos*/
+
+
+.cientifico3 {
+    width: 90px;
+    height: 118px;
+}
+
+.cientifico1 {
+    width: 100px;
+    height: 100px;
+}
+
+.cientifico2 {
+    width: 43px;
+    height: 75px;
+}
+
+/*Tamaño de los robots*/
+.robot1,
+.robot2,
+.robot3 {
+    width: 70px;
+    height: 70px;
+}
+
+.robot5 {
+    width: 90px;
+    height: 90px;
+}
+
+.robot2 {
+    width: 100px;
+    height: 100px;
+}
+
+.elevador{
+    width: 250px;
+    height: 345px;
+}
+/* Estilos de las nubes */
+.cloud {
+    width: 160px;
+    height: 160px;
+    position: relative;
+    margin: 10px;
+    top: -350px;
+    left: 10px;
+}
+.cloud_size {
+    width: 180px;
+    height: 180px;
+    
+
+}
+
+
+
+.section{
+  position: relative;
+  width: 100%;
+  display: block;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.full-height{
+  min-height: 100vh;
+}
+
+[type="checkbox"]:checked,
+[type="checkbox"]:not(:checked){
+  position: absolute;
+  left: -9999px;
+}
+
+.modal{
+  position: fixed;
+display: none;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin: 0 auto;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  overflow-x: hidden;
+  background-color: rgba(31,32,41,.75);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 250ms 700ms ease;
+}
+.modal-btn:checked ~ .modal{
+  pointer-events: auto;
+  opacity: 1;
+  transition: all 300ms ease-in-out;
+}
+.modal-wrap {
+  position: relative;
+  display: block;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  overflow: hidden;
+  padding-bottom: 20px;
+  background-color: #fff;
+    -ms-flex-item-align: center;
+    align-self: center;
+    box-shadow: 0 12px 25px 0 rgba(199,175,189,.25);
+  opacity: 0;
+  transform: scale(0.6);
+  transition: opacity 250ms 250ms ease, transform 300ms 250ms ease;
+}
+.modal-wrap img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.modal-wrap p {
+  padding: 20px 30px 0 30px;
+}
+.modal-btn:checked ~ .modal .modal-wrap{
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 250ms 500ms ease, transform 350ms 500ms ease;
+}
+
+
+.logo {
+	position: absolute;
+	top: 25px;
+	left: 25px;
+	display: block;
+	z-index: 1000;
+	transition: all 250ms linear;
+}
+.logo img {
+	height: 26px;
+	width: auto;
+	display: block;
+  	filter: brightness(10%);
+	transition: filter 250ms 700ms linear;
+}
+.modal-btn:checked ~ .logo img {
+  	filter: brightness(100%);
+	transition: all 250ms linear;
+}
+
+
+@media screen and (max-width: 500px) {
+	.modal-wrap {
+		width: calc(100% - 40px);
+		padding-bottom: 15px;
+	}
+	.modal-wrap p {
+	  padding: 15px 20px 0 20px;
+	}
+}
+
+
+.containeer {
+    margin-right: 90px;
+    display: block;
+    width: 100px;
+    margin-left: auto;
+  }
+  
+  .pixel, .pixel2 {
+    font-size: 15px;
+    color: white;
+    height: auto;
+    margin: 10px;
+    font-family: 'VT323';
+    
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    text-transform: uppercase;
+    
+    cursor: pointer;
+    
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  .pixel:active, .pixel2:active {
+    top: 2px;
+  }
+  
+  .pixel {
+    position: relative;
+    display: block;
+    margin: 10px;
+    font-family: 'VT323';
+    text-transform: uppercase;
+    
+    font-size: 15px;
+    color: white;
+  }
+  
+  .pixel::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 10px;
+    bottom: 10px;
+    left: -10px;
+    right: -10px;
+    background: black;
+    z-index: -1;
+  }
+  
+  .pixel::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 4px;
+    bottom: 4px;
+    left: -6px;
+    right: -6px;
+    background: black;
+    z-index: -1;
+  }
+  
+  .pixel {
+    padding: 10px 10px;
+    position: relative;
+    background: black;
+    width: auto;
+    z-index: 2;
+  }
+ 
+  .pixel2 {
+    position: relative;
+    display: block;
+    margin: 10px;
+    font-family: 'VT323';
+    text-transform: uppercase;
+    
+    font-size: 15px;
+    color: white;
+  }
+  
+  .pixel2::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 10px;
+    bottom: 10px;
+    left: -10px;
+    right: -10px;
+    background: black;
+    z-index: -1;
+  }
+  
+  .pixel2::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 4px;
+    bottom: 4px;
+    left: -6px;
+    right: -6px;
+    background: black;
+    z-index: -1;
+  }
+  
+  .pixel2 {
+    padding: 10px 10px;
+    position: relative;
+    background: black;
+    width: auto;
+    z-index: 2;
+  }
+
+  .pixel3 {
+    position: relative;
+    display: block;
+    margin: 10px;
+    font-family: 'VT323';
+    text-transform: uppercase;
+    
+    font-size: 25px;
+    color: white;
+  }
+  
+  .pixel3::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 10px;
+    bottom: 10px;
+    left: -10px;
+    right: -10px;
+    background: black;
+    z-index: -1;
+  }
+  
+  .pixel3::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 4px;
+    bottom: 4px;
+    left: -6px;
+    right: -6px;
+    background: black;
+    z-index: -1;
+  }
+  
+  .pixel3 {
+    padding: 10px 10px;
+    position: relative;
+    background: black;
+    width: auto;
+    z-index: 2;
+  }
+
+
+  #moveCounter {
+    font-size: 14px;
+    display: block;
+    color: #ffffff;
+    background-color: #5d2e8c;
+    padding: 10px;
+    border: 4px solid #333333; /* Borde grueso para dar efecto pixelado */
+    border-radius: 0; 
+    text-align: center;
+    width: 150px;
+    margin: 20px auto;
+    
+    box-shadow: 4px 4px 0px #000000; /* Sombra de bloque pixelada */
+}

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmacia Simi</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+   
+  
+    <div id="decoraciones" class="decoraciones">
+        <div class="enca"><img src="FondosPixel/zinas.png"></div>
+        
+     
+            <div class="farmacia"><img src="FondosPixel/image.png"></div>
+            <div class="actor"><img src="FondosPixel/michael.gif"></div>
+            <div class="mascota"><img src="FondosPixel/dog.gif"></div>
+            <div class="tinaco"><img src="FondosPixel/image-6.png"></div>
+    </div>
+    <div class="section full-height" id="resultModal">
+        <input class="modal-btn" type="checkbox" id="modal-btn" name="modal-btn"/>
+        <div class="modal">
+            <div class="modal-wrap">  
+                <img src="FondosPixel/loser.png" alt="">
+                <p id="resultText">
+                    ¡Oh no! Has perdido esta vez. 😔
+                    No te desanimes, siempre hay una oportunidad para intentarlo de nuevo y aprender de esta experiencia 🚀.</p>                
+                <button id="loseButton" class="pixel" style="left: 150px; top: 10px;">Aceptar</button>
+            </div>
+        </div>
+    </div>
+    
+
+    <div class="section full-height" id="resultModal">
+        <input class="modal-btn" type="checkbox" id="modal-btn2" name="modal-btn2"/>
+        <div class="modal">
+            <div class="modal-wrap">  
+                <img src="FondosPixel/win.gif" alt="">
+                <p id="resultText">"¡Enhorabuena!😎 Has demostrado tu habilidad y esfuerzo. ¡Reto Superado!💯"</p>                
+                <button id="loseButton2" class="pixel" style="left: 150px; top: 10px;">Ganaste</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="section full-height" id="resultModal">
+        <input class="modal-btn" type="checkbox" id="modal-btn3" name="modal-btn3"/>
+        <div class="modal">
+            <div class="modal-wrap">  
+                <img src="FondosPixel/master.png" alt="">
+                <p id="resultText">Proyecto Unidad 3 Para la materia de IA.</p>
+                <p> Equipo Zinapecuaro:Manuel,Isabel,Antonio,Samuel</p>                
+                <button   id="loseButton"class="pixel" style="left: 150px; top: 10px;" onclick="playAudio()">Empezar</button>
+            </div>
+        </div>
+    </div>
+      
+  </div>
+
+    <div id="game-container">
+        
+        <!-- Área de Laboratorios -->
+        <div id="laboratorios">
+            <div class="laboratorio" id="laboratorio1">
+                <img class="lab1" src="FondosPixel/labo.png" alt="Laboratorio 1">
+                <div class="cientificos">
+                    <img id="cientifico1" src="FondosPixel/strange.gif" class="cientifico1" alt="Científico 1">
+                    <img id="cientifico2" src="FondosPixel/mario.png" class="cientifico2" alt="Científica 2">
+                    <img id="cientifico3" src="FondosPixel/simiPix.png" class="cientifico3" alt="Científico 3">
+                    <img id="robot1" src="FondosPixel/bot.gif" class="robot1" alt="Robot 1">
+                    <img id="robot2" src="FondosPixel/robot.gif" class="robot2" alt="Robot 2">
+                    <img id="robot3" src="FondosPixel/gordito.gif" class="robot5" alt="Robot 3">
+                </div>
+            </div>
+            <div class="laboratorio" id="laboratorio2">
+                <img class="lab2" src="FondosPixel/labo2.png" alt="Laboratorio 2">
+            </div>
+        </div>
+
+        <!-- Área de Elevador -->
+        <div id="elevador">
+            <div id="elevadorInterior" class="elval">
+            </div>
+        </div>
+        
+    </div>
+
+    <div id="containeer">
+        <div id="textoo"><p></p></div>
+        <button class="pixel" id="moveButton">Enviar Elevador</button>
+        <button class="pixel2" id="moveButton3">Enviar al Laboratorio 1</button>
+        <button class="pixel" id="moveButton2">Enviar al Laboratorio 2</button>
+       
+    </div>
+ 
+   
+
+    
+    
+    <script>
+        var audio = new Audio('smooth.mp3'); // Cargar el audio
+
+        function playAudio() {
+            audio.play(); // Reproducir el audio
+            document.getElementById("modal-btn3").checked = false; // Cerrar el modal
+        }
+
+        function pauseAudio() {
+            audio.pause(); // Pausar el audio
+        }
+
+      
+        window.onload = function() {
+            document.getElementById("modal-btn3").checked = true; // Marcar el checkbox
+        };
+
+        
+    </script>
+    
+
+    <script src="scripts.js"></script>
+</body>
+</html>
